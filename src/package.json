@@ -1,0 +1,34 @@
+{
+  "name": "hit-count",
+  "version": "1.0.0",
+  "description": "hit count",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "keywords": [],
+  "author": {
+    "url": "https://github.com/itning",
+    "name": "itning",
+    "email": "itning@itning.top"
+  },
+  "repository": {
+    "url": "https://github.com/itning/axios-helper",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/itning/axios-helper/issues"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "badgen": "^3.2.2",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "ioredis": "^4.3.0",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1"
+  }
+}
