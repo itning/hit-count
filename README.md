@@ -9,7 +9,7 @@
 [![GitHub license](https://img.shields.io/github/license/itning/hit-count.svg)](https://github.com/itning/hit-count/blob/master/LICENSE)
 [![GitHub last commit](https://img.shields.io/github/last-commit/itning/hit-count.svg)](https://github.com/itning/hit-count/commits)
 [![GitHub repo size in bytes](https://img.shields.io/github/repo-size/itning/hit-count.svg)](https://github.com/itning/hit-count)
-[![language](https://img.shields.io/badge/language-NodeJS-green.svg)](https://github.com/itning/hit-count)
+[![language](https://img.shields.io/badge/language-JavaScript-green.svg)](https://github.com/itning/hit-count)
 
 ## 简介
 
