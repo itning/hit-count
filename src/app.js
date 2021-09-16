@@ -44,6 +44,9 @@ app.get('/', (req, res) => {
             scale: 1           // Set badge scale (default: 1)
         })
 
+        res.setHeader('pragma', 'no-cache');
+        res.setHeader('expires', 0);
+        res.setHeader('cache-control', 'no-cache, no-store, must-revalidate');
         res.setHeader('content-type', 'image/svg+xml');
         res.send(svgString);
     });

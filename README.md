@@ -1,6 +1,6 @@
 # hit count
 
-<img src="https://hitcount.itning.top?u=itning&r=hit-count" alt="hitCount"/>
+![hitCount](https://hitcount.itning.top?u=itning&r=hit-count)
 
 使用腾讯云函数实现，后端采用redis计数
 
