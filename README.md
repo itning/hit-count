@@ -39,7 +39,7 @@
 
 2. 进入目录中
 
-   `cd ./hit-count/src`
+   `cd ./hit-count/tencent-cloud-serverless-redis/src`
 
 3. 安装依赖
 
