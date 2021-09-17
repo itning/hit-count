@@ -16,7 +16,7 @@
 仓库访问频次计数徽章
 
 效果：
-![hitCount](https://hitcount.itning.top?u=itning&r=hit-count)
+![hitCount](https://hitcount.itning.top/?u=itning&r=hit-count)
 
 ## 如何部署自己的计数器？
 
@@ -128,3 +128,15 @@
 6. 启动
 
    `node app.js`
+   
+7. 后台运行（可选）
+
+   ```shell
+   # 安装pm2
+   npm install -g pm2
+   # 后台运行
+   pm2 app.js -o ./app.log -e error.log
+   ```
+
+   
+
