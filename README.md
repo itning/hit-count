@@ -16,7 +16,7 @@
 仓库访问频次计数徽章
 
 效果：
-![hitCount](https://hitcount.itning.top/?u=itning&r=hit-count)
+![hitCount](https://hitcount.itning.top/?u=itning&r=hit-counts)
 
 ## 如何部署自己的计数器？
 
