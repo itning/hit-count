@@ -72,3 +72,5 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 tencent-cloud-serverless-redis/.env
+
+node_modules/

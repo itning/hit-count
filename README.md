@@ -18,20 +18,20 @@
 效果：
 ![hitCount](https://hitcount.itning.top?u=itning&r=hit-count)
 
+## 如何部署自己的计数器？
 
+### 使用腾讯云函数
 
 使用[腾讯云函数](https://console.cloud.tencent.com/scf/)实现，后端采用redis计数
 
-## 如何部署自己的计数器？
-
-### 前提
+#### 前提
 
 1. 有能够使云函数访问的Redis服务器，点我查看如何白嫖Redis服务器
 2. 腾讯云账号
 
 或者你有服务器那直接部署在服务器上即可，不需要腾讯云函数。
 
-### 步骤
+#### 步骤
 
 1. 克隆仓库到本地
 
@@ -78,3 +78,53 @@
    `serverless deploy --debug`
 
 8. 进入腾讯云控制台查看结果
+
+### 使用服务器
+
+#### 前提
+
+1. 有个服务器
+2. 有个公网IP
+3. 有个域名（可选）
+
+#### 步骤
+
+1. 克隆仓库到本地
+
+   `git clone https://github.com/itning/hit-count.git`
+
+2. 进入目录
+
+   `cd ./hit-count/server-redis`
+
+3. 安装依赖
+
+   `npm install`
+
+4. 修改redis的访问路径
+
+   修改`app.js`文件
+
+   ```javascript
+   const redisStore = new redis({
+       port: 16320, // Redis instance port, redis实例端口
+       host: "", // Redis instance host, redis实例host
+       family: 4, // 4 (IPv4) or 6 (IPv6)
+       password: "", // Redis instance password, redis实例密码
+       db: 0
+   });
+   ```
+
+5. 添加访问域名白名单
+
+   修改`app.js`文件
+
+   ```javascript
+   const authorWhitelist = ["itning"];
+   ```
+
+   默认是作者自己，需要修改下
+
+6. 启动
+
+   `node app.js`
