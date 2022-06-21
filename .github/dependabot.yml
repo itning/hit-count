@@ -10,6 +10,6 @@ updates:
     schedule:
       interval: "daily"
   - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/tencent-cloud-serverless-redis" # Location of package manifests
+    directory: "/tencent-cloud-serverless-redis/src" # Location of package manifests
     schedule:
       interval: "daily"
