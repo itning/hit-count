@@ -6,8 +6,8 @@ const app = express()
 const port = 9000
 
 const redisStore = new redis({
-    port: 6378, // Redis instance port, redis实例端口
-    host: "127.0.0.1", // Redis instance host, redis实例host
+    port: 6379, // Redis instance port, redis实例端口
+    host: "redis", // Redis instance host, redis实例host
     family: 4, // 4 (IPv4) or 6 (IPv6)
     password: "", // Redis instance password, redis实例密码
     db: 0
