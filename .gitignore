@@ -74,3 +74,4 @@ fabric.properties
 tencent-cloud-serverless-redis/.env
 
 node_modules/
+dist/
