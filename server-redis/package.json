@@ -28,6 +28,6 @@
     "ioredis": "^5.3.2"
   },
   "devDependencies": {
-    "esbuild": "^0.20.1"
+    "esbuild": "^0.20.2"
   }
 }
