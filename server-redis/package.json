@@ -25,7 +25,7 @@
   "dependencies": {
     "badgen": "^3.2.3",
     "express": "~4.19.2",
-    "ioredis": "^5.3.2"
+    "ioredis": "^5.4.1"
   },
   "devDependencies": {
     "esbuild": "^0.20.2"
