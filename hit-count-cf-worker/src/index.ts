@@ -10,23 +10,9 @@
  *
  * Learn more at https://developers.cloudflare.com/workers/
  */
-import { badgen } from 'badgen';
+import {badgen} from 'badgen';
 
 const authorWhitelist = ['itning'];
-
-async function streamToNumber(stream: ReadableStream) {
-	const reader = stream.getReader();
-	let decoder = new TextDecoder();
-	let result = '';
-
-	while (true) {
-		const { done, value } = await reader.read();
-		if (done) break;
-		result += decoder.decode(value, { stream: true });
-	}
-
-	return parseFloat(result);
-}
 
 export default {
 	async fetch(request, env, ctx): Promise<Response> {
@@ -35,14 +21,14 @@ export default {
 		const user = params.get('u');
 		const repo = params.get('r');
 		if (!user || !repo) {
-			return new Response(null, { status: 404 });
+			return new Response(null, {status: 404});
 
 		}
 		if (!authorWhitelist.includes(user)) {
-			return new Response(null, { status: 403 });
+			return new Response(null, {status: 403});
 		}
 		if (repo.length > 10) {
-			return new Response(null, { status: 400 });
+			return new Response(null, {status: 400});
 		}
 		const key = `${user}-${repo}`;
 		let num = 0;
@@ -50,9 +36,13 @@ export default {
 		if (!value) {
 			num = 0;
 		} else {
-			num = await streamToNumber(value.body);
+			num = parseInt(await value.text());
 		}
-		await env.hit_count.put(key, `${++num}`);
+		await env.hit_count.put(key, `${++num}`, {
+			httpMetadata: {
+				contentType: 'text/plain'
+			}
+		});
 
 		// only `status` is required.
 		const svgString = badgen({
