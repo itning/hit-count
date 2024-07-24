@@ -137,6 +137,22 @@
    # 后台运行
    pm2 app.js -o ./app.log -e error.log
    ```
+### 使用CloudFlare Workers
 
+1. 克隆仓库到本地
+
+   `git clone https://github.com/itning/hit-count.git`
+
+2. 进入目录中
+
+   `cd ./hit-count/hit-count-cf-worker`
    
+4. 安装依赖
+
+   `npm install`
+
+5. 部署
+
+   `npm run deploy`
+
 
