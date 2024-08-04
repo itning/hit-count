@@ -27,7 +27,7 @@ export default {
 		if (!authorWhitelist.includes(user)) {
 			return new Response(null, {status: 403});
 		}
-		if (repo.length > 10) {
+		if (repo.length > 30) {
 			return new Response(null, {status: 400});
 		}
 		const key = `${user}-${repo}`;
