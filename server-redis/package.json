@@ -24,7 +24,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "badgen": "^3.2.3",
-    "express": "~5.1.0",
+    "express": "~5.2.1",
     "ioredis": "^5.8.2"
   },
   "devDependencies": {
